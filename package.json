@@ -1,0 +1,80 @@
+{
+  "name": "lmocp-bygl-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "run:web": "pnpm run start --filter bygl-web",
+    "build:web": "pnpm run build --filter bygl-web",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.qiluys.cn/Lean-market-oriented-operation-control-platform/LMOCP-BYGL-FRONT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@ant-design/pro-card": "^1.14.5",
+    "@ant-design/pro-descriptions": "^1.9.0",
+    "@ant-design/pro-form": "^1.31.2",
+    "@ant-design/pro-layout": "^6.21.1",
+    "@ant-design/pro-table": "^2.43.4",
+    "@hookform/resolvers": "^2.6.0",
+    "@umijs/route-utils": "^1.0.37",
+    "ahooks": "^2.10.6",
+    "antd": "^4.16.6",
+    "classnames": "^2.3.1",
+    "dayjs": "^1.10.6",
+    "immer": "^9.0.5",
+    "jsonpath": "^1.1.1",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "mobx-state-tree": "^5.0.2",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2",
+    "react-dev-inspector": "^1.6.0",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.10.1",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "umi": "^3.5.4",
+    "use-immer": "^0.6.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "@types/styled-components": "^5.1.11",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "engines": {
+    "node": ">=14.14.0",
+    "pnpm": ">=6"
+  },
+  "pnpm": {
+    "neverBuiltDependencies": [
+      "fsevents",
+      "level"
+    ]
+  }
+}
